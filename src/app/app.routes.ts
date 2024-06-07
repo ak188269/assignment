@@ -9,10 +9,7 @@ import { DocumentListComponent } from './document-list/document-list.component';
 import { ImageUploadComponent } from './image-upload/image-upload.component';
 
 export const routes: Routes = [
-  { path: '', redirectTo: '/select-country', pathMatch: 'full' },
-  { path: 'select-country', component: CountrySelectComponent },
-  { path: 'documents', component: DocumentListComponent },
-  { path: 'upload-image', component: ImageUploadComponent }
+  
 ];
 
 @NgModule({
