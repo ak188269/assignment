@@ -1,0 +1,11 @@
+<!-- <div>
+  <app-country-select (countryChange)="onCountryChange($event)" [selectedCountry]="selectedCountry"></app-country-select>
+</div> -->
+
+<div *ngIf="selectedCountry">
+  <h2>Documents for {{ selectedCountry.countryName }}</h2>
+  <div *ngFor="let document of selectedCountry.documents" class="document-container" (click)="goToUploadPage()">
+    <div class="document-sample"></div>
+    <div>{{ document }}</div>
+  </div>
+</div>

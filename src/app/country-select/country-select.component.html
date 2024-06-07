@@ -1,0 +1,5 @@
+<h2>Select Country</h2>
+<select [(ngModel)]="selectedCountry" (change)="onCountryChange()" class="countries-list">
+    <option value="none" *ngIf="selectedCountry=='none'">Select Country</option>
+  <option *ngFor="let country of countries" [ngValue]="country">{{country.countryName}}</option>
+</select>

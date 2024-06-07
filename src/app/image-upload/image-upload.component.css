@@ -1,0 +1,9 @@
+.actions-container{
+    display: flex;
+    flex-direction:column;
+    gap: 10px;
+}
+
+.actions-container > button {
+    cursor: pointer;
+}

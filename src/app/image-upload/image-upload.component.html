@@ -1,0 +1,22 @@
+<div>
+  <h2>Upload Image</h2>
+  <div>
+    <div *ngIf="photo" class="photo-preview">
+      <img [src]="photo" alt="Captured Photo" style="max-width: 100%; max-height: 300px;"/>
+    </div>
+    <div *ngIf="showVideo || !photo" >
+      <video #videoElement alt="Selected Image" style="max-width: 100%; max-height: 300px; border:1px solid black;" autoplay></video>
+    </div>
+    <div *ngIf="!photo" class="actions-container">
+      <button (click)="takePhoto()" *ngIf="showVideo">Take Photo</button>
+    <button (click)="capturePhoto()" *ngIf="!showVideo">Capture Photo</button>
+    <button (click)="uploadPhoto()" >Upload from Device</button>
+    </div>
+    <div  *ngIf="photo" class="action-after-photo-taken actions-container">
+    
+      <button (click)="uploadToDatabase()" style="background-color: green;color: white;">Upload</button>
+      <button (click)="tryAgain()">Try again</button>
+    </div>
+  </div>
+
+</div>
